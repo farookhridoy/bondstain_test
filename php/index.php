@@ -33,17 +33,15 @@ Answer: We can receive http request by using global variable $_REQUEST. The PHP 
 6.How to submit a form and what happens after that submitting a form? <br>
 Answer: 
 <form method="post" action="action.php"></form>
-When you click the submit button, your form data will be sent to the file specified on the form tag - in your case, "/action_page.php". What arrives there are a number of variables with a name and a value. <br>
-Note that the "variable name" is what is specified in the name= attribute of the (for e.g.) input field, and the "variable contents" is whatever is typed into the (for e.g.) input field. <br>
+When we click the submit button, our form data will be sent to the file specified on the form action tag, "/action.php". What arrives there are a number of variables with a name and a value. <br>
 
-Your back-end PHP file will need to create proper PHP $variables for each of these items, using either the $_POST or $_GET command, depending what method you used in the "method=" attribute of the form tag. As an example, your form has a textarea element called name=comment. On the PHP side, you can write: <br>
+Then back-end PHP file will need to create proper PHP $variables for each of these items, using either the $_POST or $_GET command, depending what method we used in the "method=" attribute of the form tag. As an example, our form has a textarea element called name=address. On the PHP side, we can write: <br>
 
-$cmt = $_GET['comment']; <br>
-and  you have the user's comment in a PHP variable $cmt. <br>
+$address = $_GET['address']; <br>
+and  you have the user's comment in a PHP variable $address. <br>
 
-You can do the validation at this stage, or you can validate the code in javascript before the file is even submitted. Note that javascript can intercept the form submit process and stop it, or continue it. <br>
-
-Then, your PHP file can either send the user back to the same page (in which case, you need a <?php ?> section at the top to handle that), or on to another page entirely.
+We can do the validation at this stage, or we can validate the code in javascript before the file is even submitted. Note that javascript can intercept the form submit process and stop it, or continue it. <br>
+Then, our PHP file can either send the user back to the same page (in which case, you need a <?php ?> section at the top to handle that), or on to another page entirely.
 <br>
 7. Definition : <br>
 a. Session : A session is a way to store information to be used scross multiple pages. Session is used to store data on server. <br>
@@ -58,7 +56,7 @@ $txt = "Hellow world\n"; <br>
 fwrite($myfile, $txt); <br>
 fclose($myfile); <br>
 
-9. 9. Have an array of [first_name, last_name, age] <br>
+9. Have an array of [first_name, last_name, age] <br>
 	a. $array = [
 		['Joe', 'joe@hmail.com', 24],
 		['Doe', 'doe@hmail.com', 25],
